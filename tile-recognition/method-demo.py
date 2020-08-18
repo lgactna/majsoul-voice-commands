@@ -15,6 +15,9 @@ mon = {'top': 0, 'left': 0, 'width': 800, 'height': 800}
 
 sct = mss()
 
+#because of the resize issue, maybe look into having the user define the size of the tiles in their hands?
+#then use pillow to split and resize a single, long png of every tile (or resize every png)
+
 while True:
     #https://stackoverflow.com/questions/32592950/python-opencv-template-matching-error
     #https://stackoverflow.com/questions/48818032/python-opencv-matchtemplate-error?rq=1
