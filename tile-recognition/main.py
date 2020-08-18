@@ -36,9 +36,14 @@ while True:
         top_left = min_loc
     else:
         top_left = max_loc
+
+    #observe here how it always takes the size of the original template
+    #this may or may not be bigger than desired
     bottom_right = (top_left[0] + w, top_left[1] + h)
 
     #the output image doesn't need to be gray as well
+    #we draw the rectangle on top of the original
+    #colors are in BGR!!
     cv2.rectangle(img, top_left, bottom_right, 255, 2)
     cv2.imshow('test', img)
     if cv2.waitKey(25) & 0xFF == ord('q'):
